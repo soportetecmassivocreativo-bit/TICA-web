@@ -253,7 +253,11 @@ export default function About() {
               <Image
                 alt="Container Terminal"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{
+                  objectFit: "cover",
+                  transform: "scale(1.08)",
+                  transformOrigin: "center top",
+                }}
                 sizes="(max-width: 768px) 50vw, 30vw"
                 src="/images/ship-sunset.jpg"
               />
@@ -261,6 +265,7 @@ export default function About() {
 
             {/* Blue Stats Box */}
             <div
+              className="bento-card bento-card-blue"
               style={{
                 backgroundColor: "var(--primary)",
                 color: "var(--white)",
@@ -272,10 +277,14 @@ export default function About() {
                 boxShadow: "0 10px 30px rgba(14, 165, 233, 0.25)",
               }}
             >
-              <div style={{ fontSize: "3rem", fontWeight: 900, lineHeight: 1 }}>
+              <div
+                className="bento-stat-number"
+                style={{ fontSize: "3rem", fontWeight: 900, lineHeight: 1 }}
+              >
                 30+
               </div>
               <div
+                className="bento-stat-label"
                 style={{
                   fontSize: "0.85rem",
                   fontWeight: 700,
@@ -290,6 +299,7 @@ export default function About() {
 
             {/* Dark Card */}
             <div
+              className="bento-card bento-card-dark"
               style={{
                 backgroundColor: "var(--dark-card)",
                 color: "var(--white)",
@@ -354,7 +364,11 @@ export default function About() {
               <Image
                 alt="Customs Office Work"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{
+                  objectFit: "cover",
+                  transform: "scale(1.08)",
+                  transformOrigin: "center top",
+                }}
                 sizes="(max-width: 768px) 50vw, 30vw"
                 src="/images/ship-aerial.jpg"
               />

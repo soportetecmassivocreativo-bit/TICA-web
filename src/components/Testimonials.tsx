@@ -250,13 +250,17 @@ export default function Testimonials() {
               <Image
                 alt="Cargo Ship Navigating"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{
+                  objectFit: "cover",
+                  transform: "scale(1.08)",
+                  transformOrigin: "center top",
+                }}
                 sizes="(max-width: 768px) 100vw, 40vw"
                 src="/images/ship-frontal.jpg"
               />
               {/* Floating Badge Card */}
               <div
-                className="glass-card-dark animate-float"
+                className="glass-card-dark animate-float testimonial-floating-card"
                 style={{
                   position: "absolute",
                   bottom: "2rem",

@@ -589,7 +589,19 @@ font-size:.9rem
 
   /* About section mobile */
   .about-images-grid {
-    height: 240px !important;
+    height: auto !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: minmax(135px, auto) !important;
+    gap: 0.85rem !important;
+  }
+  .bento-card {
+    padding: 1.15rem 1rem !important;
+  }
+  .bento-stat-number {
+    font-size: 2.25rem !important;
+  }
+  .bento-stat-label {
+    font-size: 0.75rem !important;
   }
 
   /* Services section mobile */
@@ -632,6 +644,22 @@ font-size:.9rem
   /* Ports section mobile */
   .ports-grid {
     grid-template-columns: 1fr !important;
+  }
+  .port-inspector-card {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.5rem 1.25rem !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Testimonials floating badge mobile */
+  .testimonial-floating-card {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: 1rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   /* Footer mobile */
