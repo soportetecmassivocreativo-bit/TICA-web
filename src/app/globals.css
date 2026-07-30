@@ -500,57 +500,45 @@ font-size:.9rem
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
 }
-@media (max-width: 991px) {
+/* ==========================================================================
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS (TABLET & MOBILE)
+   ========================================================================== */
+
+/* 1. TABLET & MEDIUM SCREENS (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .hero-floating-card-container {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
   .testimonials-grid {
     grid-template-columns: 1fr !important;
-    gap: 4rem !important;
+    gap: 3rem !important;
   }
-  .testimonials-reveal {
-    max-width: 100% !important;
-  }
-}
-@media (max-width: 991px) {
   .contact-grid {
     grid-template-columns: 1fr !important;
     gap: 2.5rem !important;
   }
-  .form-row {
+  .port-inspector-card {
     grid-template-columns: 1fr !important;
-    gap: 0 !important;
+    padding: 1.75rem !important;
+    gap: 1.5rem !important;
   }
-  .contact-form-container {
-    padding: 2rem !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .contact-subgrid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-  }
-  .contact-form-container {
-    padding: 1.5rem 1.25rem !important;
-  }
-  .about-images-grid {
-    height: 260px !important;
-  }
-}
-
-.footer-link:hover {
-  color: var(--primary) !important;
-}
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
-  }
-}
-.footer-social-link:hover {
-  background-color: var(--primary) !important;
-  color: var(--white) !important;
-}
-
-@media (max-width: 991px) {
   .ports-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.25rem !important;
@@ -559,11 +547,118 @@ font-size:.9rem
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+  .bento-fullwidth {
+    grid-column: span 2 !important;
+  }
 }
+
+/* 2. MOBILE PHONES (max-width: 640px) */
 @media (max-width: 640px) {
+  .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  h1 {
+    font-size: clamp(1.85rem, 7.5vw, 2.5rem) !important;
+  }
+  h2 {
+    font-size: clamp(1.55rem, 6vw, 2.1rem) !important;
+  }
+  .eyebrow {
+    font-size: 0.75rem !important;
+  }
+
+  /* Hero section mobile */
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .hero-buttons .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr) !important;
+    display: grid !important;
+    gap: 0.75rem !important;
+  }
+
+  /* About section mobile */
+  .about-images-grid {
+    height: 240px !important;
+  }
+
+  /* Services section mobile */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Bento stats mobile */
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .bento-fullwidth {
+    grid-column: span 1 !important;
+    padding: 1.5rem !important;
+  }
+  .bento-image-col {
+    min-height: 220px !important;
+  }
+
+  /* Contact section mobile */
+  .contact-subgrid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .contact-form-container {
+    padding: 1.5rem 1.15rem !important;
+  }
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  /* Prevent auto-zoom on iOS Safari */
+  .form-input {
+    font-size: 16px !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Ports section mobile */
   .ports-grid {
     grid-template-columns: 1fr !important;
   }
+
+  /* Footer mobile */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+}
+
+/* 3. SMALL MOBILE PHONES (max-width: 380px) */
+@media (max-width: 380px) {
+  .hero-stats-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.footer-link:hover {
+  color: var(--primary) !important;
+}
+.footer-social-link:hover {
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
 }
 
 /* Process Section Horizontal Scroll */
@@ -589,29 +684,4 @@ font-size:.9rem
 .process-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary) !important;
-}
-
-/* General Mobile Polish */
-@media (max-width: 640px) {
-  .container {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-  }
-  h1 {
-    font-size: clamp(2rem, 8vw, 2.6rem) !important;
-  }
-  h2 {
-    font-size: clamp(1.65rem, 6.5vw, 2.2rem) !important;
-  }
-  .eyebrow {
-    font-size: 0.75rem !important;
-  }
-  .hero-buttons {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-  .hero-buttons .btn {
-    width: 100% !important;
-    justify-content: center !important;
-  }
 }

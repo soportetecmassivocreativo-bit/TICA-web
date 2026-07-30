@@ -500,7 +500,7 @@ export default function Ports() {
 
         {/* Selected Port Detailed Inspector Banner */}
         <div
-          className="glass-card"
+          className="glass-card port-inspector-card"
           style={{
             backgroundColor: "var(--white)",
             borderRadius: "var(--radius-lg)",

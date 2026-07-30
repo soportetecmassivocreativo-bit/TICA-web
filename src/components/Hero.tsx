@@ -169,6 +169,7 @@ export default function Hero() {
 
             {/* Stats list */}
             <div
+              className="hero-stats-row"
               style={{
                 display: "flex",
                 gap: "2.5rem",
