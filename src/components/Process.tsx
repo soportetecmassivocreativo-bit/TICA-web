@@ -224,7 +224,7 @@ export default function Process() {
             key={idx}
             className="process-card"
             style={{
-              width: "360px",
+              width: "min(340px, 80vw)",
               minHeight: "280px",
               flexShrink: 0,
               backgroundColor:

@@ -134,6 +134,7 @@ export default function Hero() {
 
             {/* Call to Actions */}
             <div
+              className="hero-buttons"
               style={{
                 display: "flex",
                 gap: "1rem",

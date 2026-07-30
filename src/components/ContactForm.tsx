@@ -123,6 +123,7 @@ export default function ContactForm() {
           >
             {/* Top 2 Offices side-by-side */}
             <div
+              className="contact-subgrid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
@@ -234,6 +235,7 @@ export default function ContactForm() {
 
             {/* Middle 2 Cards: Phone & Legal */}
             <div
+              className="contact-subgrid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",

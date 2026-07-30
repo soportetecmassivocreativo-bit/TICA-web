@@ -512,7 +512,7 @@ font-size:.9rem
 @media (max-width: 991px) {
   .contact-grid {
     grid-template-columns: 1fr !important;
-    gap: 4rem !important;
+    gap: 2.5rem !important;
   }
   .form-row {
     grid-template-columns: 1fr !important;
@@ -522,13 +522,27 @@ font-size:.9rem
     padding: 2rem !important;
   }
 }
+
+@media (max-width: 640px) {
+  .contact-subgrid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .contact-form-container {
+    padding: 1.5rem 1.25rem !important;
+  }
+  .about-images-grid {
+    height: 260px !important;
+  }
+}
+
 .footer-link:hover {
   color: var(--primary) !important;
 }
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr !important;
-    gap: 3rem !important;
+    gap: 2.5rem !important;
   }
 }
 .footer-social-link:hover {
@@ -543,7 +557,7 @@ font-size:.9rem
   }
   .ports-cta-grid {
     grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
+    gap: 2rem !important;
   }
 }
 @media (max-width: 640px) {
@@ -560,7 +574,7 @@ font-size:.9rem
   scrollbar-color: var(--primary) transparent;
 }
 .process-scroll-wrapper::-webkit-scrollbar {
-  height: 6px;
+  height: 4px;
 }
 .process-scroll-wrapper::-webkit-scrollbar-track {
   background: transparent;
@@ -569,13 +583,35 @@ font-size:.9rem
   background: var(--primary);
   border-radius: 10px;
 }
-.process-scroll-container {
-  scroll-snap-type: x proximity;
-}
 .process-card {
   scroll-snap-align: start;
 }
 .process-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary) !important;
+}
+
+/* General Mobile Polish */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem) !important;
+  }
+  h2 {
+    font-size: clamp(1.65rem, 6.5vw, 2.2rem) !important;
+  }
+  .eyebrow {
+    font-size: 0.75rem !important;
+  }
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .hero-buttons .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
 }
