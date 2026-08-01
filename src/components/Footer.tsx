@@ -362,8 +362,7 @@ export default function Footer() {
                 marginBottom: "1rem",
               }}
             >
-              Teléfono: 0412-821.5473 <br />
-              Correo: contact@tica-agency.com
+              Teléfono: 0412-821.5473
             </p>
             <div
               style={{

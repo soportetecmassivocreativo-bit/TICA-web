@@ -288,8 +288,7 @@ export default function ContactForm() {
                       margin: 0,
                     }}
                   >
-                    0412-821.5473 <br />
-                    contact@tica-agency.com
+                    0412-821.5473
                   </p>
                 </div>
               </div>
