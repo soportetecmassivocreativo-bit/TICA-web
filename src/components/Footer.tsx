@@ -362,7 +362,7 @@ export default function Footer() {
                 marginBottom: "1rem",
               }}
             >
-              Tlf/WhatsApp: 0412-821.5473 <br />
+              Teléfono: 0412-821.5473 <br />
               Correo: contact@tica-agency.com
             </p>
             <div

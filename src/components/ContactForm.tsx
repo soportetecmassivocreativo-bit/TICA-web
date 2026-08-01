@@ -278,7 +278,7 @@ export default function ContactForm() {
                       marginBottom: "0.35rem",
                     }}
                   >
-                    Teléfono & WhatsApp
+                    Teléfono
                   </h4>
                   <p
                     style={{
