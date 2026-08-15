@@ -42,7 +42,12 @@ export const metadata: Metadata = {
       "Con más de 30 años de trayectoria en importaciones, exportaciones y logística integral.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
