@@ -4,26 +4,14 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "var(--dark)",
-        color: "var(--white)",
+        backgroundColor: "var(--white)",
+        color: "var(--text)",
         padding: "4rem 0 2rem 0",
-        borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+        borderTop: "1px solid var(--slate-200)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Background Blob */}
-      <div
-        className="blob blob-blue"
-        style={{
-          bottom: "-20%",
-          right: "10%",
-          opacity: 0.08,
-          width: "400px",
-          height: "400px",
-        }}
-      />
-
       <div className="container" style={{ position: "relative", zIndex: 10 }}>
         {/* Footer Grid (4 Columns) */}
         <div
@@ -48,7 +36,7 @@ export default function Footer() {
                 position: "relative",
                 width: "90px",
                 height: "65px",
-                filter: "drop-shadow(0 2px 10px rgba(56, 189, 248, 0.35)) brightness(1.15)",
+                filter: "drop-shadow(0 2px 8px rgba(14, 165, 233, 0.18))",
               }}
             >
               <Image
@@ -61,7 +49,7 @@ export default function Footer() {
             </div>
             <p
               style={{
-                color: "var(--text-light)",
+                color: "var(--text-muted)",
                 fontSize: "0.9rem",
                 lineHeight: 1.6,
                 maxWidth: "260px",
@@ -81,11 +69,12 @@ export default function Footer() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  backgroundColor: "var(--cream)",
+                  border: "1px solid var(--slate-200)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--text-light)",
+                  color: "var(--text-muted)",
                   transition: "var(--transition-fast)",
                 }}
               >
@@ -103,11 +92,12 @@ export default function Footer() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  backgroundColor: "var(--cream)",
+                  border: "1px solid var(--slate-200)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--text-light)",
+                  color: "var(--text-muted)",
                   transition: "var(--transition-fast)",
                 }}
               >
@@ -125,11 +115,12 @@ export default function Footer() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  backgroundColor: "var(--cream)",
+                  border: "1px solid var(--slate-200)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--text-light)",
+                  color: "var(--text-muted)",
                   transition: "var(--transition-fast)",
                 }}
               >
@@ -148,7 +139,7 @@ export default function Footer() {
                 fontSize: "1.05rem",
                 fontWeight: 700,
                 marginBottom: "1.5rem",
-                color: "var(--white)",
+                color: "var(--text)",
               }}
             >
               Servicios
@@ -168,7 +159,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -182,7 +173,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -196,7 +187,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -210,7 +201,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -224,7 +215,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -243,7 +234,7 @@ export default function Footer() {
                 fontSize: "1.05rem",
                 fontWeight: 700,
                 marginBottom: "1.5rem",
-                color: "var(--white)",
+                color: "var(--text)",
               }}
             >
               Empresa
@@ -263,7 +254,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -277,7 +268,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -291,7 +282,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -305,7 +296,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -319,7 +310,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-light)",
+                    color: "var(--text-muted)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -338,14 +329,14 @@ export default function Footer() {
                 fontSize: "1.05rem",
                 fontWeight: 700,
                 marginBottom: "1.5rem",
-                color: "var(--white)",
+                color: "var(--text)",
               }}
             >
               Oficina Puerto Cabello
             </h4>
             <p
               style={{
-                color: "var(--text-light)",
+                color: "var(--text-muted)",
                 fontSize: "0.9rem",
                 lineHeight: 1.6,
                 marginBottom: "0.5rem",
@@ -356,7 +347,7 @@ export default function Footer() {
             </p>
             <p
               style={{
-                color: "var(--text-light)",
+                color: "var(--text-muted)",
                 fontSize: "0.9rem",
                 lineHeight: 1.6,
                 marginBottom: "1rem",
@@ -379,7 +370,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div
           style={{
-            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+            borderTop: "1px solid var(--slate-200)",
             paddingTop: "2rem",
             display: "flex",
             justifyContent: "center",
@@ -387,7 +378,7 @@ export default function Footer() {
             textAlign: "center",
           }}
         >
-          <p style={{ fontSize: "0.85rem", color: "var(--text-light)", margin: 0 }}>
+          <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: 0 }}>
             © 2026 TICA C.A. Todos los derechos reservados.
           </p>
         </div>
