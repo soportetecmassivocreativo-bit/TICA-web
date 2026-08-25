@@ -256,23 +256,6 @@ export default function Ports() {
             oportunas y la máxima seguridad jurídica en cada operación.
           </p>
           </div>
-
-          <div
-            style={{
-              position: "relative",
-              width: "110px",
-              height: "80px",
-              flexShrink: 0,
-              filter: "drop-shadow(0 2px 8px rgba(14, 165, 233, 0.25))",
-            }}
-          >
-            <Image
-              src="/logo.png"
-              alt="TICA C.A. Logo"
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
         </div>
 
         {/* Interactive Ports Grid */}

@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "var(--white)",
-        color: "var(--text)",
+        backgroundColor: "var(--dark)",
+        color: "var(--white)",
         padding: "4rem 0 2rem 0",
-        borderTop: "1px solid var(--slate-200)",
+        borderTop: "1px solid rgba(255, 255, 255, 0.05)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <p
               style={{
-                color: "var(--text-muted)",
+                color: "var(--text-light)",
                 fontSize: "0.9rem",
                 lineHeight: 1.6,
                 maxWidth: "260px",
@@ -69,12 +69,12 @@ export default function Footer() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "var(--cream)",
-                  border: "1px solid var(--slate-200)",
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--text-muted)",
+                  color: "var(--text-light)",
                   transition: "var(--transition-fast)",
                 }}
               >
@@ -92,12 +92,12 @@ export default function Footer() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "var(--cream)",
-                  border: "1px solid var(--slate-200)",
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--text-muted)",
+                  color: "var(--text-light)",
                   transition: "var(--transition-fast)",
                 }}
               >
@@ -115,12 +115,12 @@ export default function Footer() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "var(--cream)",
-                  border: "1px solid var(--slate-200)",
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--text-muted)",
+                  color: "var(--text-light)",
                   transition: "var(--transition-fast)",
                 }}
               >
@@ -139,7 +139,7 @@ export default function Footer() {
                 fontSize: "1.05rem",
                 fontWeight: 700,
                 marginBottom: "1.5rem",
-                color: "var(--text)",
+                color: "var(--white)",
               }}
             >
               Servicios
@@ -159,7 +159,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -173,7 +173,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -187,7 +187,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -201,7 +201,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -215,7 +215,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -234,7 +234,7 @@ export default function Footer() {
                 fontSize: "1.05rem",
                 fontWeight: 700,
                 marginBottom: "1.5rem",
-                color: "var(--text)",
+                color: "var(--white)",
               }}
             >
               Empresa
@@ -254,7 +254,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -268,7 +268,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -282,7 +282,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -296,7 +296,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -310,7 +310,7 @@ export default function Footer() {
                   className="footer-link"
                   style={{
                     fontSize: "0.9rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-light)",
                     textDecoration: "none",
                     transition: "var(--transition-fast)",
                   }}
@@ -329,14 +329,14 @@ export default function Footer() {
                 fontSize: "1.05rem",
                 fontWeight: 700,
                 marginBottom: "1.5rem",
-                color: "var(--text)",
+                color: "var(--white)",
               }}
             >
               Oficina Puerto Cabello
             </h4>
             <p
               style={{
-                color: "var(--text-muted)",
+                color: "var(--text-light)",
                 fontSize: "0.9rem",
                 lineHeight: 1.6,
                 marginBottom: "0.5rem",
@@ -347,7 +347,7 @@ export default function Footer() {
             </p>
             <p
               style={{
-                color: "var(--text-muted)",
+                color: "var(--text-light)",
                 fontSize: "0.9rem",
                 lineHeight: 1.6,
                 marginBottom: "1rem",
@@ -370,7 +370,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div
           style={{
-            borderTop: "1px solid var(--slate-200)",
+            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
             paddingTop: "2rem",
             display: "flex",
             justifyContent: "center",
@@ -378,7 +378,7 @@ export default function Footer() {
             textAlign: "center",
           }}
         >
-          <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: 0 }}>
+          <p style={{ fontSize: "0.85rem", color: "var(--text-light)", margin: 0 }}>
             © 2026 TICA C.A. Todos los derechos reservados.
           </p>
         </div>
