@@ -4,22 +4,25 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 // ── Animated counter hook ──────────────────────────────────────────────────
-function useCountUp(target: number, duration = 1800, started = false) {
+function useCountUp(target: number, duration = 1800, trigger: number) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!started) return;
+    if (trigger === 0) return;
+    setCount(0);
     let startTime: number | null = null;
+    let rafId: number;
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       // ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.floor(eased * target));
-      if (progress < 1) requestAnimationFrame(step);
+      if (progress < 1) rafId = requestAnimationFrame(step);
     };
-    requestAnimationFrame(step);
-  }, [started, target, duration]);
+    rafId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(rafId);
+  }, [trigger, target, duration]);
 
   return count;
 }
@@ -28,15 +31,15 @@ function useCountUp(target: number, duration = 1800, started = false) {
 function AnimatedStat({
   target,
   suffix,
-  started,
+  trigger,
   style,
 }: {
   target: number;
   suffix: string;
-  started: boolean;
+  trigger: number;
   style?: React.CSSProperties;
 }) {
-  const count = useCountUp(target, 1800, started);
+  const count = useCountUp(target, 1800, trigger);
   return (
     <div style={style}>
       {count.toLocaleString("es-VE")}
@@ -48,20 +51,21 @@ function AnimatedStat({
 // ── Main component ─────────────────────────────────────────────────────────
 export default function Stats() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [started, setStarted] = useState(false);
+  // increments every time section enters view → re-triggers animation
+  const [trigger, setTrigger] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !started) {
-          setStarted(true);
+        if (entry.isIntersecting) {
+          setTrigger((t) => t + 1);
         }
       },
       { threshold: 0.3 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  }, [started]);
+  }, []);
 
   const marqueeItems = [
     "Importaciones",
@@ -154,7 +158,7 @@ export default function Stats() {
                 <AnimatedStat
                   target={30}
                   suffix="+"
-                  started={started}
+                  trigger={trigger}
                   style={{
                     fontSize: "4.5rem",
                     fontWeight: 900,
@@ -201,7 +205,7 @@ export default function Stats() {
                 <AnimatedStat
                   target={5000}
                   suffix="+"
-                  started={started}
+                  trigger={trigger}
                   style={{
                     fontSize: "4.5rem",
                     fontWeight: 900,
@@ -346,7 +350,7 @@ export default function Stats() {
                 <AnimatedStat
                   target={98}
                   suffix="%"
-                  started={started}
+                  trigger={trigger}
                   style={{
                     fontSize: "4.5rem",
                     fontWeight: 900,
