@@ -1,6 +1,68 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+
+// ── Animated counter hook ──────────────────────────────────────────────────
+function useCountUp(target: number, duration = 1800, started = false) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!started) return;
+    let startTime: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [started, target, duration]);
+
+  return count;
+}
+
+// ── Animated stat display ──────────────────────────────────────────────────
+function AnimatedStat({
+  target,
+  suffix,
+  started,
+  style,
+}: {
+  target: number;
+  suffix: string;
+  started: boolean;
+  style?: React.CSSProperties;
+}) {
+  const count = useCountUp(target, 1800, started);
+  return (
+    <div style={style}>
+      {count.toLocaleString("es-VE")}
+      {suffix}
+    </div>
+  );
+}
+
+// ── Main component ─────────────────────────────────────────────────────────
 export default function Stats() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [started]);
+
   const marqueeItems = [
     "Importaciones",
     "Exportaciones",
@@ -16,6 +78,7 @@ export default function Stats() {
     <>
       <section
         id="stats"
+        ref={sectionRef}
         style={{
           padding: "2.5rem 0",
           backgroundColor: "var(--white)",
@@ -88,15 +151,16 @@ export default function Stats() {
                 Experiencia Comprobada
               </div>
               <div>
-                <div
+                <AnimatedStat
+                  target={30}
+                  suffix="+"
+                  started={started}
                   style={{
                     fontSize: "4.5rem",
                     fontWeight: 900,
                     lineHeight: 1,
                   }}
-                >
-                  30+
-                </div>
+                />
                 <p
                   style={{
                     fontSize: "0.95rem",
@@ -134,16 +198,17 @@ export default function Stats() {
                 Operaciones
               </div>
               <div>
-                <div
+                <AnimatedStat
+                  target={5000}
+                  suffix="+"
+                  started={started}
                   style={{
                     fontSize: "4.5rem",
                     fontWeight: 900,
                     lineHeight: 1,
                     color: "var(--primary-deeper)",
                   }}
-                >
-                  5000+
-                </div>
+                />
                 <p
                   style={{
                     fontSize: "0.9rem",
@@ -278,15 +343,16 @@ export default function Stats() {
                 Confianza
               </div>
               <div>
-                <div
+                <AnimatedStat
+                  target={98}
+                  suffix="%"
+                  started={started}
                   style={{
                     fontSize: "4.5rem",
                     fontWeight: 900,
                     lineHeight: 1,
                   }}
-                >
-                  98%
-                </div>
+                />
                 <p
                   style={{
                     fontSize: "0.9rem",
